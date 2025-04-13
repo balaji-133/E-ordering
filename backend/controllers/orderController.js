@@ -63,7 +63,9 @@ import jwt from 'jsonwebtoken';
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const placeOrder = async (req, res) => {
-    const frontEnd_url = process.env.FRONTEND_URL || "http://localhost:5173";
+    // const frontEnd_url = process.env.FRONTEND_URL || "http://localhost:5173";
+            
+            const frontEnd_url = "https://e-ordering-frontend.onrender.com";
     
     try {
         // Verify and decode the token to get user ID
